@@ -23,7 +23,7 @@ public class EmployeeValidators {
         }
 
         String password_error = _validatePassword(e.getPassword(), password_check_flag);
-        if (!password_error.equals("")) {
+        if(!password_error.equals("")) {
             errors.add(password_error);
         }
 

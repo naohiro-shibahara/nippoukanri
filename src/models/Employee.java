@@ -19,7 +19,7 @@ import javax.persistence.Table;
             ),
     @NamedQuery(
             name = "getEmployeeCount",
-            query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
+            query = "SELECT COUNT(e) FROM Employee AS e"
             ),
     @NamedQuery(
             name = "checkRegistredCode",
@@ -82,7 +82,7 @@ public class Employee {
         this.name = name;
     }
 
-    public String getPassword(String password) {
+    public String getPassword() {
         return password;
     }
 
