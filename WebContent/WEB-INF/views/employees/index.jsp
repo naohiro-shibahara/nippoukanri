@@ -22,7 +22,7 @@
                         <td><c:out value="${employee.name}" /></td>
                         <td><c:choose>
                                 <c:when test="${employee.delete_flag == 1}">
-                              削除済み
+                              (削除済み)
                               </c:when>
                                 <c:otherwise>
                                     <a
@@ -34,7 +34,7 @@
             </tbody>
         </table>
 
-        <div id="@pagination">
+        <div id="pagination">
           (全 ${employees_count} 件) <br />
         <c:forEach var="i" begin="1" end="${((employees_count - 1) / 15) + 1}" step="1">
             <c:choose>
