@@ -5,7 +5,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
 public class DBUtil {
-    private static final String PESISTENCE_UNIT_NAME = "daily_report_system";
+    private static final String PERSISTENCE_UNIT_NAME = "daily_report_system";
     private static EntityManagerFactory emf;
 
     public static EntityManager createEntityManager() {
@@ -13,11 +13,10 @@ public class DBUtil {
     }
 
     private static EntityManagerFactory _getEntityManagerFactory() {
-        if (emf == null) {
-            emf = Persistence.createEntityManagerFactory(PESISTENCE_UNIT_NAME);
+        if(emf == null) {
+            emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         }
 
         return emf;
     }
-
 }

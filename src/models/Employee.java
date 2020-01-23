@@ -22,7 +22,7 @@ import javax.persistence.Table;
             query = "SELECT COUNT(e) FROM Employee AS e"
             ),
     @NamedQuery(
-            name = "checkRegistredCode",
+            name = "checkRegisteredCode",
             query = "SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
             ),
     @NamedQuery(
@@ -98,31 +98,27 @@ public class Employee {
         this.admin_flag = admin_flag;
     }
 
-    public Timestamp getCreated_at(){
+    public Timestamp getCreated_at() {
         return created_at;
     }
 
-    public void setCreated_at(Timestamp created_at){
+    public void setCreated_at(Timestamp created_at) {
         this.created_at = created_at;
     }
 
-    public Timestamp getUpdated_at(){
+    public Timestamp getUpdated_at() {
         return updated_at;
     }
 
-    public void setUpdated_at(Timestamp updated_at){
+    public void setUpdated_at(Timestamp updated_at) {
         this.updated_at = updated_at;
     }
 
-    public Integer getDelete_flag(){
+    public Integer getDelete_flag() {
         return delete_flag;
     }
 
-    public void setDelete_flag(Integer delete_flag){
+    public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
-
-
-
-
 }
